@@ -5,7 +5,7 @@ import "modern-normalize";
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
-import TanstackProvider from "@/components/TanstackProvider/TanstackProvider";
+import TanStackProvider from "@/components/TanStackProvider/TanstackProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,14 +30,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>
-        <TanstackProvider>
+        <TanStackProvider>
           <Header />
           <main>
             {children}
             <div id="modal-root"></div>
           </main>
           <Footer />
-        </TanstackProvider>
+        </TanStackProvider>
       </body>
     </html>
   );
